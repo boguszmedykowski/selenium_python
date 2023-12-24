@@ -15,14 +15,14 @@ from selenium.webdriver.common.by import By
 
 @pytest.fixture(scope="class")
 def driver():
-    driver = webdriver.Chrome()
+    driver = webdriver.Firefox()
     yield driver
     # driver.quit()
 
 
 class TestTest1():
     def test_test1(self, driver):
-        driver.get("https://parabank.parasoft.com/parabank/index.htm")
+        driver.get("https://python.org")
         driver.set_window_size(945, 1028)
         driver.find_element(By.NAME, "username").click()
         driver.find_element(By.NAME, "username").send_keys("dddd")
