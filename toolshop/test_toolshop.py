@@ -29,7 +29,6 @@ def wait(driver, by, value):
 
 class TestTest1():
     def test_register(self, driver):
-        # Dane użytkownika
         credentials = {
             'first_name': 'test_name',
             'last_name': 'test_lastname',
@@ -73,6 +72,5 @@ class TestTest1():
         wait(driver, By.XPATH, "//*[contains(text(), 'Login')]")
 
 
-# Uruchomienie testów za pomocą Pytest
 if __name__ == "__main__":
     pytest.main()
